@@ -124,32 +124,34 @@
     <h2>Илья<br>&<br>Екатерина</h2>
     <p>Пожалуйста, подтвердите присутствие до 15.08.2026</p>
 
-    <form id="rsvpForm">
-      <input
+    <form id="rsvpForm" class="rsvp-form">
+
+    <input
         type="text"
         name="name"
         placeholder="Ваше имя"
         required
-      >
+    >
 
-      <div class="radio-group">
+    <div class="choice">
         <label>
-          <input type="radio" name="attendance" value="Да, с удовольствием" required>
-          Да, с удовольствием
+            <input type="radio" name="attendance" value="Да, с удовольствием" required>
+            <span>Да, с удовольствием</span>
         </label>
 
         <label>
-          <input type="radio" name="attendance" value="К сожалению, не смогу">
-          К сожалению, не смогу
+            <input type="radio" name="attendance" value="К сожалению, не смогу">
+            <span>К сожалению, не смогу</span>
         </label>
-      </div>
+    </div>
 
-      <button type="submit">
-        Подтвердить
-      </button>
+    <button type="submit">
+        Подтвердить присутствие
+    </button>
 
-      <p id="result"></p>
-    </form>
+    <p id="result"></p>
+
+</form>
   </div>
 </section>
   </main>
