@@ -1,11 +1,11 @@
 :root{
-  --wine:#7B8162;
-  --wine2:#5E654D;
-  --cream:#f5eee7;
-  --sand:#cdb9a6;
-  --ink:#251a1d;
-  --muted:#8d747b;
-  --gold:#c7a36f;
+    --wine:#7B8162;
+    --wine2:#5E654D;
+    --cream:#f5eee7;
+    --sand:#cdb9a6;
+    --ink:#251a1d;
+    --muted:#8d747b;
+    --gold:#A78B5A;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
