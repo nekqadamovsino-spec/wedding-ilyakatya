@@ -19,11 +19,22 @@ tick();
 setInterval(tick, 1000);
 
 const bar = document.getElementById('progressBar');
-window.addEventListener('scroll', () => {
-  const doc = document.documentElement;
-  const percent = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
-  bar.style.width = `${percent * 100}%`;
-});
+
+function updateProgress() {
+  if (!bar) return;
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+
+  const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+  bar.style.width = Math.min(100, Math.max(0, progress)) + "%";
+}
+
+window.addEventListener("scroll", updateProgress, { passive: true });
+window.addEventListener("resize", updateProgress);
+window.addEventListener("load", updateProgress);
+
+updateProgress();
 
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
