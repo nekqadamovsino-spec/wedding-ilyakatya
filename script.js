@@ -1,3 +1,4 @@
+const WEB_APP_URL = "https://script.google.com/macros/s/ВАШ_ID/exec";
 const weddingDate = new Date('2026-09-11T14:00:00+03:00');
 
 function tick(){
@@ -35,3 +36,34 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 document.getElementById('soundBtn').addEventListener('click', ()=>{
   alert('Сюда можно добавить музыку: положи файл music.mp3 и я подключу кнопку.');
 });
+const form = document.getElementById("rsvpForm");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const btn = form.querySelector("button");
+    const result = document.getElementById("result");
+
+    btn.disabled = true;
+    btn.textContent = "Отправка...";
+
+    try {
+      const data = new FormData(form);
+
+      await fetch(WEB_APP_URL, {
+        method: "POST",
+        body: data
+      });
+
+      result.textContent = "Спасибо! Ваш ответ получен ❤️";
+      form.reset();
+
+    } catch (err) {
+      result.textContent = "Ошибка отправки";
+    }
+
+    btn.disabled = false;
+    btn.textContent = "Подтвердить";
+  });
+}
