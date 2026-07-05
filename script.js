@@ -67,3 +67,17 @@ if (form) {
     btn.textContent = "Подтвердить";
   });
 }
+const soundBtn = document.getElementById("soundBtn");
+const music = document.getElementById("weddingMusic");
+
+if (soundBtn && music) {
+  soundBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      soundBtn.textContent = "Ⅱ";
+    } else {
+      music.pause();
+      soundBtn.textContent = "♪";
+    }
+  });
+}
