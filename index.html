@@ -119,16 +119,39 @@
     </section>
 
     <section class="story rsvp">
-      <div class="reveal">
-        <p class="script">С любовью</p>
-        <h2>Илья<br>&<br>Екатерина</h2>
-        <p>Пожалуйста, подтвердите присутствие до 15.08.2026</p>
-        <div class="buttons">
-          <a href="https://t.me/" target="_blank">Буду с радостью</a>
-          <a href="https://wa.me/" target="_blank">Написать в WhatsApp</a>
-        </div>
+  <div class="reveal">
+    <p class="script">С любовью</p>
+    <h2>Илья<br>&<br>Екатерина</h2>
+    <p>Пожалуйста, подтвердите присутствие до 15.08.2026</p>
+
+    <form id="rsvpForm">
+      <input
+        type="text"
+        name="name"
+        placeholder="Ваше имя"
+        required
+      >
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="attendance" value="Да, с удовольствием" required>
+          Да, с удовольствием
+        </label>
+
+        <label>
+          <input type="radio" name="attendance" value="К сожалению, не смогу">
+          К сожалению, не смогу
+        </label>
       </div>
-    </section>
+
+      <button type="submit">
+        Подтвердить
+      </button>
+
+      <p id="result"></p>
+    </form>
+  </div>
+</section>
   </main>
 
   <script src="script.js"></script>
