@@ -67,7 +67,7 @@ const soundBtn = document.getElementById("soundBtn");
 const music = document.getElementById("weddingMusic");
 
 if (soundBtn && music) {
-  soundBtn.addEventListener("click", async () => {
+  soundBtn.onclick = async function () {
     try {
       if (music.paused) {
         await music.play();
@@ -77,8 +77,8 @@ if (soundBtn && music) {
         soundBtn.textContent = "♪";
       }
     } catch (err) {
+      alert("Музыка не запустилась");
       console.log(err);
-      alert("Музыка не запускается. Проверь файл music.mp3");
     }
-  });
+  };
 }
