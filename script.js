@@ -67,13 +67,18 @@ const soundBtn = document.getElementById("soundBtn");
 const music = document.getElementById("weddingMusic");
 
 if (soundBtn && music) {
-  soundBtn.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      soundBtn.textContent = "Ⅱ";
-    } else {
-      music.pause();
-      soundBtn.textContent = "♪";
+  soundBtn.addEventListener("click", async () => {
+    try {
+      if (music.paused) {
+        await music.play();
+        soundBtn.textContent = "Ⅱ";
+      } else {
+        music.pause();
+        soundBtn.textContent = "♪";
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Музыка не запускается. Проверь файл music.mp3");
     }
   });
 }
