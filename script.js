@@ -32,10 +32,6 @@ const observer = new IntersectionObserver((entries)=>{
 },{threshold:.25});
 
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-document.getElementById('soundBtn').addEventListener('click', ()=>{
-  alert('Сюда можно добавить музыку: положи файл music.mp3 и я подключу кнопку.');
-});
 const form = document.getElementById("rsvpForm");
 
 if (form) {
