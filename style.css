@@ -39,7 +39,7 @@ h1 span{font-family:"Great Vibes",cursive;font-size:.62em;color:var(--gold)}
 .date{letter-spacing:8px;margin-top:28px;font-size:13px}
 .scroll-hint{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.68)}
 .cream{background:var(--cream);color:var(--ink)}
-.number{position:absolute;top:120px;left:30px;font-family:"Cormorant Garamond",serif;font-size:86px;color:rgba(101,31,53,.12)}
+.number{position:absolute;top:0px;left:30px;font-family:"Cormorant Garamond",serif;font-size:86px;color:rgba(101,31,53,.12)}
 .content{max-width:720px;text-align:left}
 .content h2{font-size:clamp(42px,10vw,80px);line-height:.95;margin:18px 0}
 .content p{font-size:17px;line-height:1.8;color:#6c565c}
