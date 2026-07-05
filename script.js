@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyKi-QQ6p4sYUYgbNdirFm0H_QIv08d_Jo7HrsIujIuD3IYdxSwi4HTn3mEr6dNJugQ/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxjRIsiUPrfMavhKB55ItGLITBdYaaaZ83hWVW4ncznM43w6V4jf_FoofOiB6ZYTgdY9Q/exec";
 const weddingDate = new Date('2026-09-11T14:00:00+03:00');
 
 function tick(){
